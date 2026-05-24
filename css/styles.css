@@ -1276,9 +1276,20 @@ footer {
 	nav {
 		padding: 0 20px;
 	}
+	.logo-last-name {
+		display: none;
+	}
 	.nav-links,
 	.nav-badge {
 		display: none;
+	}
+	.nav-right {
+		gap: 12px;
+	}
+	.nav-cta {
+		padding: 8px 16px;
+		font-size: 0.8rem;
+		white-space: nowrap;
 	}
 	.hamburger {
 		display: flex;
