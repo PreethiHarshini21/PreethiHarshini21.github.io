@@ -1,271 +1,529 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Preethi Harshini | Power BI Data Analyst</title>
+		<meta
+			name="description"
+			content="P Preethi Harshini — Results-driven Power BI Data Analyst delivering scalable BI solutions, interactive dashboards, and actionable insights. Proficient in Power BI, DAX, SQL, and Snowflake." />
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0a1a'/%3E%3Crect x='2' y='2' width='60' height='60' rx='12' fill='none' stroke='%23a78bfa' stroke-width='3'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='26' font-weight='bold' fill='%23a78bfa' text-anchor='middle'%3EPH%3C/text%3E%3C/svg%3E" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="css/styles.css" />
+	</head>
+	<body>
+		<div class="cursor-glow" id="cursorGlow"></div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Mobile Menu -->
+		<div class="mobile-menu" id="mobileMenu">
+			<button class="mobile-close" id="mobileClose">&times;</button>
+			<a href="#hero" onclick="closeMobile()">Home</a>
+			<a href="#about" onclick="closeMobile()">About</a>
+			<a href="#experience" onclick="closeMobile()">Experience</a>
+			<a href="#skills" onclick="closeMobile()">Skills</a>
+			<a href="#projects" onclick="closeMobile()">Projects</a>
+			<a href="#education" onclick="closeMobile()">Education</a>
+			<a href="#contact" onclick="closeMobile()">Contact</a>
+		</div>
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+		<!-- Navbar -->
+		<nav id="navbar">
+			<a href="#hero" class="nav-logo">
+				<div class="monogram">PH</div>
+				Preethi Harshini
+			</a>
+			<ul class="nav-links">
+				<li><a href="#hero" class="active">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#education">Education</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<div class="nav-right">
+				<div class="nav-badge">
+					<span class="pulse"></span>
+					Open to Work
+				</div>
+				<a href="#contact" class="nav-cta">Hire Me</a>
+				<button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+					<svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="12" cy="12" r="5"></circle>
+						<line x1="12" y1="1" x2="12" y2="3"></line>
+						<line x1="12" y1="21" x2="12" y2="23"></line>
+						<line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+						<line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+						<line x1="1" y1="12" x2="3" y2="12"></line>
+						<line x1="21" y1="12" x2="23" y2="12"></line>
+						<line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+						<line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+					</svg>
+					<svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+						<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+					</svg>
+				</button>
+				<div class="hamburger" id="hamburger" onclick="openMobile()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</nav>
 
-    <!-- =====BOX ICONS===== -->
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+		<!-- ===== HERO ===== -->
+		<section id="hero">
+			<!-- Aurora blobs background -->
+			<div class="aurora-container">
+				<div class="aurora-blob"></div>
+				<div class="aurora-blob"></div>
+				<div class="aurora-blob"></div>
+				<div class="aurora-blob"></div>
+			</div>
+			<div class="particles"></div>
+			<div class="container">
+				<div class="hero-content">
+					<div class="hero-left">
+						<div class="hero-tag reveal">
+							<span class="dot"></span>
+							BI Analyst @ TPI Composites
+						</div>
+						<h1 class="hero-name reveal reveal-delay-1">
+							Preethi <span class="accent">Harshini</span>
+						</h1>
+						<p class="hero-role reveal reveal-delay-2">
+							I'm a <strong><span id="typingText">Power BI Developer</span></strong><span class="typing-cursor">|</span> — transforming raw data into
+							<strong>compelling visual stories</strong> and
+							<strong>actionable business insights</strong>.
+						</p>
+						<div class="hero-stats reveal reveal-delay-3">
+							<div class="stat-chip">
+								<span class="number">2+</span>
+								<span class="label">Years Exp</span>
+							</div>
+							<div class="stat-chip">
+								<span class="number">10+</span>
+								<span class="label">Dashboards</span>
+							</div>
+							<div class="stat-chip">
+								<span class="number">9.7</span>
+								<span class="label">CGPA</span>
+							</div>
+						</div>
+						<div class="hero-cta-group reveal reveal-delay-4">
+							<a href="#projects" class="btn-primary">
+								View My Work
+								<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+							</a>
+							<a href="#contact" class="btn-outline">
+								Get in Touch
+							</a>
+						</div>
+					</div>
+					<div class="hero-right reveal reveal-delay-5">
+						<div class="data-viz-canvas">
+							<canvas id="dataVizCanvas" width="600" height="600"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hero-scroll">
+				Scroll
+				<div class="scroll-line"></div>
+			</div>
+		</section>
 
-    <title>Portfolio | Preethi</title>
+		<!-- ===== MARQUEE ===== -->
+		<div class="marquee-section">
+			<div class="marquee-track">
+				<div class="marquee-item"><span class="sep">◆</span> Power BI</div>
+				<div class="marquee-item"><span class="sep">◆</span> DAX</div>
+				<div class="marquee-item"><span class="sep">◆</span> SQL</div>
+				<div class="marquee-item"><span class="sep">◆</span> Snowflake</div>
+				<div class="marquee-item"><span class="sep">◆</span> Data Modeling</div>
+				<div class="marquee-item"><span class="sep">◆</span> Power Query</div>
+				<div class="marquee-item"><span class="sep">◆</span> Tableau</div>
+				<div class="marquee-item"><span class="sep">◆</span> Power Automate</div>
+				<div class="marquee-item"><span class="sep">◆</span> Python</div>
+				<div class="marquee-item"><span class="sep">◆</span> Azure</div>
+				<div class="marquee-item"><span class="sep">◆</span> ServiceNow</div>
+				<div class="marquee-item"><span class="sep">◆</span> Data Visualization</div>
+				<!-- Duplicate for seamless loop -->
+				<div class="marquee-item"><span class="sep">◆</span> Power BI</div>
+				<div class="marquee-item"><span class="sep">◆</span> DAX</div>
+				<div class="marquee-item"><span class="sep">◆</span> SQL</div>
+				<div class="marquee-item"><span class="sep">◆</span> Snowflake</div>
+				<div class="marquee-item"><span class="sep">◆</span> Data Modeling</div>
+				<div class="marquee-item"><span class="sep">◆</span> Power Query</div>
+				<div class="marquee-item"><span class="sep">◆</span> Tableau</div>
+				<div class="marquee-item"><span class="sep">◆</span> Power Automate</div>
+				<div class="marquee-item"><span class="sep">◆</span> Python</div>
+				<div class="marquee-item"><span class="sep">◆</span> Azure</div>
+				<div class="marquee-item"><span class="sep">◆</span> ServiceNow</div>
+				<div class="marquee-item"><span class="sep">◆</span> Data Visualization</div>
+			</div>
+		</div>
 
+		<!-- ===== ABOUT ===== -->
+		<section id="about">
+			<div class="container">
+				<div class="section-header reveal">
+					<div class="section-label">About Me</div>
+					<h2 class="section-title">Turning Data into Decisions</h2>
+					<p class="section-subtitle">
+						I bridge the gap between raw data and business strategy through compelling visual analytics.
+					</p>
+				</div>
+				<div class="about-grid">
+					<div>
+						<p class="about-text reveal">
+							Results-driven <strong>Power BI Data Analyst</strong> with nearly 2 years of experience delivering scalable BI solutions, interactive dashboards, and actionable insights. Proficient in <strong>Power BI, DAX, SQL, Snowflake, Excel, and Power Automate</strong>, with expertise in data modeling, query optimization, KPI tracking, and SLA monitoring.
+						</p>
+						<p class="about-text reveal reveal-delay-1">
+							Experienced in automating reporting workflows, collaborating with <strong>cross-functional global teams</strong>, and leveraging Agile methodologies using Jira to deliver timely, business-aligned insights that drive <strong>operational efficiency</strong> and <strong>data-driven decision-making</strong>.
+						</p>
+						<div class="about-info reveal reveal-delay-2">
+							<div class="info-item">
+								<span>Location</span><br/>
+								India
+							</div>
+							<div class="info-item">
+								<span>Experience</span><br/>
+								~2 Years
+							</div>
+							<div class="info-item">
+								<span>Specialization</span><br/>
+								BI & Data Analytics
+							</div>
+							<div class="info-item">
+								<span>Education</span><br/>
+								B.Tech CSE
+							</div>
+						</div>
+					</div>
+					<div class="about-cards">
+						<div class="about-card reveal">
+							<div class="about-card-icon">📊</div>
+							<h4>Interactive Dashboards</h4>
+							<p>Delivered 10+ Power BI dashboards supporting finance, IT, and operational decision-making across global teams.</p>
+						</div>
+						<div class="about-card reveal reveal-delay-1">
+							<div class="about-card-icon">⚡</div>
+							<h4>Workflow Automation</h4>
+							<p>Automated SLA breach and ticket-aging alerts using Power Automate and ServiceNow, reducing manual effort by 60%.</p>
+						</div>
+						<div class="about-card reveal reveal-delay-2">
+							<div class="about-card-icon">🔒</div>
+							<h4>Secure BI Reporting</h4>
+							<p>Implemented Row-Level Security (RLS) and collaborated with cross-functional global teams for reliable reporting.</p>
+						</div>
+						<div class="about-card reveal reveal-delay-3">
+							<div class="about-card-icon">🚀</div>
+							<h4>Performance Optimization</h4>
+							<p>Built optimized data models with advanced DAX measures, leveraging Performance Analyzer and Measure Killer.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-</head>
+		<!-- ===== EXPERIENCE ===== -->
+		<section id="experience">
+			<div class="container">
+				<div class="section-header reveal">
+					<div class="section-label">Experience</div>
+					<h2 class="section-title">Professional Journey</h2>
+					<p class="section-subtitle">
+						Building impactful BI solutions across global organizations.
+					</p>
+				</div>
+				<div class="experience-timeline">
+					<div class="timeline-item reveal">
+						<div class="timeline-dot"></div>
+						<div class="timeline-date">June 2024 – Present</div>
+						<div class="timeline-content">
+							<h3>BI Analyst</h3>
+							<div class="company">TPI Composites</div>
+							<ul>
+								<li>Delivered 10+ Power BI dashboards supporting finance, IT, and operational decision-making across global teams.</li>
+								<li>Built optimized data models and developed advanced DAX measures, leveraging Performance Analyzer and external tools like Measure Killer to improve report performance and efficiency.</li>
+								<li>Automated SLA breach and ticket-aging alerts using Power Automate and ServiceNow, reducing manual effort and improving response time by 60%.</li>
+								<li>Implemented Row-Level Security (RLS) and collaborated with cross-functional global teams to ensure secure, reliable BI reporting.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<body>
-    <!--===== HEADER =====-->
-    <header class="l-header">
-        <nav class="nav bd-grid">
-            <div>
-                <a href="#" class="nav__logo">P.Preethi Harshini</a>
-            </div>
+		<!-- ===== SKILLS ===== -->
+		<section id="skills">
+			<div class="container">
+				<div class="section-header reveal">
+					<div class="section-label">Core Skills</div>
+					<h2 class="section-title">My Tech Arsenal</h2>
+					<p class="section-subtitle">
+						A blend of analytics, engineering, and collaborative tools that power my work.
+					</p>
+				</div>
+				<div class="skills-grid">
+					<div class="skill-group reveal">
+						<div class="skill-group-title">Analytics & BI</div>
+						<div class="skill-items">
+							<div class="skill-item">📊 Power BI</div>
+							<div class="skill-item">📐 DAX</div>
+							<div class="skill-item">🔄 Power Query</div>
+							<div class="skill-item">📈 Tableau</div>
+							<div class="skill-item">🗂️ Data Modeling</div>
+							<div class="skill-item">📉 Data Visualization</div>
+							<div class="skill-item">🔍 Data Analysis</div>
+						</div>
+					</div>
+					<div class="skill-group reveal reveal-delay-1">
+						<div class="skill-group-title">Database & Querying</div>
+						<div class="skill-items">
+							<div class="skill-item">🗄️ SQL</div>
+							<div class="skill-item">❄️ Snowflake</div>
+						</div>
+					</div>
+					<div class="skill-group reveal reveal-delay-2">
+						<div class="skill-group-title">Tools & Platforms</div>
+						<div class="skill-items">
+							<div class="skill-item">📗 Excel</div>
+							<div class="skill-item">📑 PowerPoint</div>
+							<div class="skill-item">🐍 Python</div>
+							<div class="skill-item">⚙️ Power Automate</div>
+							<div class="skill-item">📋 Jira</div>
+							<div class="skill-item">🎫 ServiceNow</div>
+							<div class="skill-item">🧵 Fabric</div>
+							<div class="skill-item">🔁 ETL</div>
+							<div class="skill-item">☁️ Azure</div>
+						</div>
+					</div>
+					<div class="skill-group reveal reveal-delay-3">
+						<div class="skill-group-title">Professional Skills</div>
+						<div class="skill-items">
+							<div class="skill-item">📝 Technical Documentation</div>
+							<div class="skill-item">🏃 Agile</div>
+							<div class="skill-item">🤝 Stakeholder Collaboration</div>
+							<div class="skill-item">🧩 Problem-Solving</div>
+							<div class="skill-item">💬 Communication</div>
+							<div class="skill-item">✅ Data Validation</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                </ul>
-            </div>
+		<!-- ===== PROJECTS ===== -->
+		<section id="projects">
+			<div class="container">
+				<div class="section-header reveal">
+					<div class="section-label">Projects</div>
+					<h2 class="section-title">Featured Work</h2>
+					<p class="section-subtitle">
+						Real-world BI solutions that drove measurable business impact.
+					</p>
+				</div>
+				<div class="projects-grid">
+					<!-- Project 1 -->
+					<div class="project-card reveal">
+						<div class="project-icon">💰</div>
+						<h3>IT Project Costing Report</h3>
+						<p>Designed a finance-driven Power BI dashboard for project budget analysis, cost tracking, and forecasting across IT initiatives. Replaced manual Excel-based reporting with automated BI solutions.</p>
+						<div class="project-impact">📉 40% Effort Reduction</div>
+						<div class="project-tags">
+							<span class="project-tag">Power BI</span>
+							<span class="project-tag">DAX</span>
+							<span class="project-tag">Finance</span>
+						</div>
+					</div>
 
-            <div class="nav__toggle" id="nav-toggle">
-                <i class='bx bx-menu'></i>
-            </div>
-        </nav>
-    </header>
+					<!-- Project 2 -->
+					<div class="project-card reveal reveal-delay-1">
+						<div class="project-icon">🏭</div>
+						<h3>Plant Maintenance Report</h3>
+						<p>Designed a global Power BI solution for asset performance monitoring and downtime analysis, partnering with Mexico-based stakeholders to standardize KPIs across plants.</p>
+						<div class="project-impact">⬆️ 97% Asset Uptime</div>
+						<div class="project-tags">
+							<span class="project-tag">Power BI</span>
+							<span class="project-tag">RLS</span>
+							<span class="project-tag">Global</span>
+						</div>
+					</div>
 
-    <main class="l-main">
-        <!--===== HOME =====-->
-        <section class="home bd-grid" id="home">
-            <div class="home__data">
-                <h1 class="home__title">Hey there!<br>I'm <span class="home__title-color">Preethi </span><br>Software Developer</h1>
+					<!-- Project 3 -->
+					<div class="project-card reveal reveal-delay-2">
+						<div class="project-icon">📋</div>
+						<h3>Supplier List Adoption</h3>
+						<p>Designed a Power BI analytics solution to monitor approval timelines, identify bottlenecks, and track performance across Product Engineering, RSM, and GTPM levels.</p>
+						<div class="project-impact">📉 30% Fewer Follow-ups</div>
+						<div class="project-tags">
+							<span class="project-tag">Power BI</span>
+							<span class="project-tag">Compliance</span>
+							<span class="project-tag">Analytics</span>
+						</div>
+					</div>
 
-                <a href="https://drive.google.com/file/d/1Kcu-1iROB5kRUMtEXbgy023DfrNUmovj/view?usp=sharing" target="_blank" class="button">View Resume</a>
-            </div>
+					<!-- Project 4 -->
+					<div class="project-card reveal reveal-delay-3">
+						<div class="project-icon">🧹</div>
+						<h3>5S Digital Audit Dashboard</h3>
+						<p>Designed a centralized Power BI solution to digitize 5S audits, enabling tracking of site performance, trends, and benchmarking insights across global locations.</p>
+						<div class="project-impact">🐍 Custom Python Visuals</div>
+						<div class="project-tags">
+							<span class="project-tag">Power BI</span>
+							<span class="project-tag">Python</span>
+							<span class="project-tag">Global</span>
+						</div>
+					</div>
 
-            <div class="home__social">
-                <a href="https://www.instagram.com/preethi.harshini/" target="_blank" class="home__social-icon"><i class='bx bxl-instagram' ></i></a>
+					<!-- Project 5 (full width) -->
+					<div class="project-card reveal reveal-delay-4">
+						<div class="project-icon">🔔</div>
+						<h3>Ticket Aging & SLA Breach Email Automation</h3>
+						<p>Designed automated workflows using Power Automate and ServiceNow to track aging and SLA-breached tickets, replacing manual monitoring. Enhanced incident visibility and enabled real-time tracking.</p>
+						<div class="project-impact">⚡ 60% Faster Response</div>
+						<div class="project-tags">
+							<span class="project-tag">Power Automate</span>
+							<span class="project-tag">ServiceNow</span>
+							<span class="project-tag">Automation</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-                <a href="https://www.linkedin.com/in/p-preethi-harshini-355b3920b/" target="_blank" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/PreethiHarshini21" target="_blank" class="home__social-icon"><i class='bx bxl-github' ></i></a>
-                <a href="mailto:preethiharshini.02@gmail.com" target="_blank" class="home__social-icon"><i class='bx bxs-envelope' ></i></a>
+		<!-- ===== EDUCATION ===== -->
+		<section id="education">
+			<div class="container">
+				<div class="section-header reveal">
+					<div class="section-label">Education</div>
+					<h2 class="section-title">Academic Background</h2>
+				</div>
+				<div class="education-card reveal">
+					<div class="education-icon">🎓</div>
+					<div>
+						<h3>B. Tech in Computer Science Engineering</h3>
+						<div class="edu-school">SRM Institute of Science & Technology, Chennai</div>
+						<div class="edu-meta">2020 – 2024</div>
+						<div class="edu-cgpa">⭐ CGPA: 9.7</div>
+					</div>
+				</div>
 
-            </div>
+				<!-- Certifications -->
+				<div class="section-header reveal" style="margin-top: 80px;">
+					<div class="section-label">Certifications</div>
+					<h2 class="section-title">Professional Credentials</h2>
+				</div>
+				<div class="certs-grid">
+					<div class="cert-card reveal">
+						<div class="cert-icon">🗄️</div>
+						<h4>SQL</h4>
+						<p>HackerRank</p>
+					</div>
+					<div class="cert-card reveal reveal-delay-1">
+						<div class="cert-icon">🧵</div>
+						<h4>Fabric Analytics Engineer Associate</h4>
+						<p>Microsoft</p>
+					</div>
+					<div class="cert-card reveal reveal-delay-2">
+						<div class="cert-icon">🏃</div>
+						<h4>Agile Scrum Foundation</h4>
+						<p>Simplilearn</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-            <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <mask id="mask0" mask-type="alpha">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                        </mask>
-                        <g mask="url(#mask0)">
-                            <path d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z"/>
-                            <image class="home_4blob-img" x="80" y="60" href="assets/img/bitmoji.png"/>
-                        </g>
-                    </svg>
-            </div>
-        </section>
+		<!-- ===== CONTACT ===== -->
+		<section id="contact">
+			<div class="container">
+				<div class="section-header reveal">
+					<div class="section-label">Contact</div>
+					<h2 class="section-title">Let's Connect</h2>
+					<p class="section-subtitle">
+						Have a project in mind or want to discuss data-driven solutions? I'd love to hear from you.
+					</p>
+				</div>
+				<div class="contact-grid">
+					<div>
+						<p class="contact-text reveal">
+							I'm always excited to collaborate on challenging BI projects and help organizations unlock the power of their data. Whether you need interactive dashboards, automated reporting, or data strategy consulting — let's make it happen!
+						</p>
+						<div class="contact-links">
+							<a href="tel:+917010015921" class="contact-link reveal reveal-delay-1">
+								<div class="contact-link-icon">📱</div>
+								<span>+91 7010015921</span>
+							</a>
+							<a href="mailto:preethiharshini.02@gmail.com" class="contact-link reveal reveal-delay-2">
+								<div class="contact-link-icon">✉️</div>
+								<span>preethiharshini.02@gmail.com</span>
+							</a>
+							<a href="https://github.com/P-Preethi-Harshini" target="_blank" class="contact-link reveal reveal-delay-3">
+								<div class="contact-link-icon">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+								</div>
+								<span>GitHub</span>
+							</a>
+							<a href="https://www.linkedin.com/in/p-preethi-harshini/" target="_blank" class="contact-link reveal reveal-delay-4">
+								<div class="contact-link-icon">
+									<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+								</div>
+								<span>LinkedIn</span>
+							</a>
+						</div>
+					</div>
+					<form class="contact-form reveal" onsubmit="event.preventDefault(); alert('Thank you for reaching out! I\'ll get back to you soon.'); this.reset();">
+						<div class="form-group">
+							<label for="contact-name">Name</label>
+							<input type="text" id="contact-name" placeholder="Your Name" required />
+						</div>
+						<div class="form-group">
+							<label for="contact-email">Email</label>
+							<input type="email" id="contact-email" placeholder="your@email.com" required />
+						</div>
+						<div class="form-group">
+							<label for="contact-message">Message</label>
+							<textarea id="contact-message" placeholder="Tell me about your project or inquiry..." required></textarea>
+						</div>
+						<button type="submit" class="submit-btn">
+							Send Message
+							<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+						</button>
+					</form>
+				</div>
+			</div>
+		</section>
 
-        <!--===== ABOUT =====-->
-        <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
+		<!-- ===== FOOTER ===== -->
+		<footer>
+			<div class="container">
+				<div class="footer-content">
+					<div class="footer-social">
+						<a href="tel:+917010015921" aria-label="Phone">📱</a>
+						<a href="mailto:preethiharshini.02@gmail.com" aria-label="Email">✉️</a>
+						<a href="https://github.com/P-Preethi-Harshini" target="_blank" aria-label="GitHub">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+						</a>
+						<a href="https://www.linkedin.com/in/p-preethi-harshini/" target="_blank" aria-label="LinkedIn">
+							<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+						</a>
+					</div>
+					<p class="footer-copy">
+						© 2024 Preethi Harshini. Crafted with 💜
+					</p>
+				</div>
+			</div>
+		</footer>
 
-            <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="assets/img/perfil.jpeg" alt="">
-                </div>
-
-                <div>
-                    <h2 class="about__subtitle">I'm P.Preethi Harshini</h2>
-                    <p class="about__text">
-                        I'm currently pursuing my Bachelor degree with specialization in Computer Science at Srm University, Ramapuram. I have an overall CGPA of 9.72. I'm interested in ReactJS, HTML, CSS, Javascript and more. I love to solve problems using c++.
-
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
-
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Professional Skills</h2>
-                    <!-- <p class="skills__text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit optio id vero amet, alias architecto consectetur error eum eaque sit.</p> -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                        <div class="skills__bar skills__html">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">95%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                        <div class="skills__bar skills__css">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <!-- <i class='bx bxl-c-plus-plus '></i> -->
-                            <i class='bx bx-code-alt skills__icon'></i>
-                            <span class="skills__name">C++</span>
-                        </div>
-                        <div class="skills__bar skills__cpp">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">80%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JAVASCRIPT</span>
-                        </div>
-                        <div class="skills__bar skills__js">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">65%</span>
-                        </div>
-                    </div>
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-react skills__icon'></i>
-                            <span class="skills__name">ReactJS</span>
-                        </div>
-                        <div class="skills__bar skills__ux">
-
-                        </div>
-                        <div>
-                            <span class="skills__percentage">85%</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div>
-                    <img src="assets/img/work3.jpg" alt="" class="skills__img">
-                </div>
-            </div>
-        </section>
-
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Work</h2>
-
-            <div class="work__container bd-grid">
-
-
-
-
-
-                <div class="work__item">
-                    <a href="https://github.com/PreethiHarshini21/FlyBecky" class="work__img">
-                        <img src="assets/img/work1-flybecky.png" alt="">
-                        <div class="work__overlay">
-                            <p>FlyBecky</p>
-                            <p>A cool Pygame based project done exclusively using python</p>
-                        </div>
-
-                    </a>
-                </div>
-
-                <div class="work__item">
-                    <a href="https://github.com/PreethiHarshini21/Mr.Shaek" class="work__img">
-                        <img src="assets/img/work2-sheik.png" alt="">
-                        <div class="work__overlay">
-                            <p>Mr.Shaek - AI</p>
-                            <p>AI desktop Voice Assistant project done purely using python.</p>
-                        </div>
-                    </a>
-                </div>
-                <div class="work__item">
-                    <a href="https://github.com/PreethiHarshini21/Drum-Kit" class="work__img">
-                        <img src="assets/img/work3-drum.png" alt="">
-                        <div class="work__overlay">
-                            <p>Drum Kit</p>
-                            <p>This is a Drum-Kit Website where you can tune your composition</p>
-                        </div>
-                    </a>
-                </div>
-
-
-                <div class="work__item">
-                    <a href="https://github.com/PreethiHarshini21/CoronaVirus-Plot-Map" class="work__img">
-                        <img src="assets/img/work4-corona.png" alt="">
-                        <div class="work__overlay">
-                            <p>CoronaVirus-Plot-Map</p>
-                            <p>In this project you can view ,all the corona virus cases all over the world.</p>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="work__item">
-                    <a href="https://github.com/PreethiHarshini21/KwizzChamp" class="work__img">
-                        <img src="assets/img/work5-kwizzChamp.png" alt="">
-                        <div class="work__overlay">
-                            <p>KwizzChamp</p>
-                            <p>A quiz application which can be used by thevisually impaired as well.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
-
-            <div class="contact__container bd-grid">
-                <form action="https://formsubmit.co/preethiharshini.02@gmail.com" class=" contact__form " method="post">
-                    <input type="text" placeholder="Name " class="contact__input ">
-                    <input type="mail" placeholder="Email " class="contact__input ">
-                    <textarea name=" " placeholder="Start Typing..." id=" " cols="0 " rows="10 " class="contact__input "></textarea>
-                    <input type="submit" value="Send" class="contact__button button ">
-                </form>
-            </div>
-        </section>
-    </main>
-
-    <!--===== FOOTER =====-->
-    <footer class="footer ">
-        <p class="footer__title ">P.Preethi Harshini</p>
-        <div class="footer__social ">
-            <!-- <a href="# " class="footer__icon "><i class='bx bxl-facebook' ></i></a> -->
-            <a href="https://www.instagram.com/preethi.harshini/ " target="_blank " class="footer__icon "><i class='bx bxl-instagram' ></i></a>
-            <!-- <a href="# " class="footer__icon "><i class='bx bxl-twitter' ></i></a> -->
-            <a href="https://www.linkedin.com/in/p-preethi-harshini-355b3920b/ " target="_blank " class="footer__icon "><i class='bx bxl-linkedin'></i></a>
-            <a href="https://github.com/PreethiHarshini21 " target="_blank " class="footer__icon "><i class='bx bxl-github' ></i></a>
-            <a href="mailto:preethiharshini.02@gmail.com " target="_blank " class="footer__icon "><i class='bx bxs-envelope' ></i></a>
-
-        </div>
-        <p class="footer__copy ">&#169; Preethi. All rigths reserved</p>
-    </footer>
-
-
-    <!--===== SCROLL REVEAL =====-->
-    <script src="https://unpkg.com/scrollreveal "></script>
-
-    <!--===== MAIN JS =====-->
-    <script src="assets/js/main.js "></script>
-</body>
-
+		<script src="js/main.js"></script>
+	</body>
 </html>
